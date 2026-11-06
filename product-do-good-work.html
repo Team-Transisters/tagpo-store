@@ -1,0 +1,35 @@
+<main class="container py-5">
+    <div class="row">
+        <div class = col-md-6>
+            <img src="images/do-good-work.jpg" class="img-fluid" alt="Do Good Work Tee graphic shirt" >
+        </div>
+        <div class="col-md-6">
+            <h1 id="productName">Do Good Work Tee</h1>
+            <p class="h4 text-success">₱499</p>
+            <p>A simple statement for people who believe good work speaks for itself.</p>
+
+            <form id="orderForm">
+                <div class="mb-3"
+                    <label for="orderSize" class="form-label">Select Size</label>
+                    <select class="form-select" id="orderSize" required>
+                        <option value="" disabled selected>Select size</option>
+                        <option value="XS">Extra Small</option>
+                        <option value="S">Small</option>
+                        <option value="M">Medium</option>
+                        <option value="L">Large</option>
+                        <option value="XL">Extra Large</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="orderQuantity" class="form-label">Quantity</label>
+                    <input type="number" class="form-control" id="orderQuantity" min="1" value="1" required>
+                </div>
+                <div class="mb-3">
+                    <label for="customerName" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="customerName" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Order Now</button>
+            </form>
+        </div>
+    </div>
+</main>
