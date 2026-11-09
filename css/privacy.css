@@ -1,160 +1,173 @@
 @import url('https://fonts.googleapis.com/css2?family=Inria+Sans:wght@700&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
 
 :root {
-    --tagpo-primary: #ff7a3d;
-    --tagpo-secondary-1: #9c8817;
-    --tagpo-secondary-2: #52070f;
-    --tagpo-neutral: #fffadd;
-    --tagpo-dark: #333333;
+  --tagpo-primary: #FF7A3D;
+  --tagpo-secondary-1: #9C8817;
+  --tagpo-secondary-2: #52070F;
+  --tagpo-neutral: #FFFADD;
+  --tagpo-dark: #333333;
 
-    --tagpo-font-header: 'Inria Sans', sans-serif;
-    --tagpo-font-body: 'Poppins', sans-serif;
+  --font-header: 'Inria Sans', sans-serif;
+  --font-body: 'Poppins', sans-serif;
 }
 
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: var(--tagpo-font-body);
-    font-size: 0.95rem;
-    line-height: 1.6;
-    color: var(--tagpo-dark);
-    background-color: #ffffff;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--tagpo-dark);
+  background-color: #ffffff;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+header {
+  width: 100%;
+  background-color: #ffffff;
+  z-index: 1030; /* Keeps header above page content while scrolling */
 }
 
 .brand-logo-text {
-    font-family: var(--tagpo-font-header);
-    color: var(--tagpo-secondary-2);
-    font-weight: 700;
-    font-size: 2.2rem;
-    letter-spacing: -0.5px;
-    text-decoration: none;
+  font-family: var(--font-header);
+  color: var(--tagpo-secondary-2);
+  font-weight: 700;
+  font-size: 2.2rem;
+  letter-spacing: -0.5px;
+  text-decoration: none;
+}
+
+.nav-link {
+  color: var(--tagpo-dark) !important;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--tagpo-primary) !important;
 }
 
 .search-pill-btn {
-    background-color: #e5e5e5;
-    border-radius: 50px;
-    width: 44px;
-    height: 36px;
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.85rem;
-    transition: background-color 0.2s ease;
+  background-color: #e5e5e5;
+  border-radius: 50px;
+  width: 44px;
+  height: 36px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
 }
 
 .search-pill-btn:hover {
-    background-color: var(--tagpo-neutral);
+  background-color: var(--tagpo-neutral);
 }
 
 .content-container {
-    max-width: 900px;
+  max-width: 900px;
+  width: 100%;
 }
 
 .page-title {
-    font-family: var(--tagpo-font-header);
-    font-size: 3.5rem;
-    font-weight: 700;
-    color: var(--tagpo-primary);
-    line-height: 1.1;
+  font-family: var(--font-header);
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: var(--tagpo-primary);
+  line-height: 1.1;
 }
 
 .subtitle-text {
-    font-size: 0.95rem;
-    font-weight: 600;
-    font-style: italic;
-    color: var(--tagpo-secondary-2);
-    line-height: 1.5;
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-style: italic;
+  color: var(--tagpo-secondary-2);
 }
 
 .policy-section {
-    margin-bottom: 2.2rem;
+  margin-bottom: 2rem;
 }
 
 .policy-section h2 {
-    font-family: var(--tagpo-font-header);
-    font-size: 1.15rem;
-    font-weight: 700;
-    color: var(--tagpo-secondary-1);
-    margin-bottom: 0.4rem;
-}
-
-.policy-section p {
-    margin-bottom: 0.5rem;
-    color: var(--tagpo-dark)
+  font-family: var(--font-header);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--tagpo-secondary-1);
+  margin-bottom: 0.4rem;
 }
 
 .policy-section .section-intro {
-    font-style: italic;
-    margin-bottom: 0.5rem;
+  font-style: italic;
+  margin-bottom: 0.5rem;
 }
 
 .policy-section ul {
-    padding-left: 1.25rem;
-    margin-bottom: 0.5rem;
+  padding-left: 1.25rem;
 }
 
 .policy-section li {
-    margin-bottom: 0.35rem;
-    color: var(--tagpo-dark);
-}
-
-.policy-section li strong {
-    font-weight: 700;
-    color: #111111;
+  margin-bottom: 0.35rem;
 }
 
 footer {
-    background-color: var(--tagpo-neutral);
-    color: var(--tagpo-dark);
-    font-size: 0.85rem;
-    font-family: var(--tagpo-font-body);
+  background-color: var(--tagpo-neutral);
+  color: var(--tagpo-dark);
+  font-size: 0.85rem;
+  font-family: var(--font-body);
+  width: 100% !important;
+  margin-top: auto;
+}
+
+.footer-logo-img {
+  max-height: 48px; /* Adjust height based on your PNG dimensions */
+  width: auto;
+  object-fit: contain;
+}
+
+.social-icon-img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  vertical-align: middle;
+  transition: opacity 0.2s ease;
+}
+
+.social-icon-img:hover {
+  opacity: 0.75;
 }
 
 .footer-hr {
-    border-color: rgba(0, 0, 0, 0.1);
-    margin: 0.75rem 0;
-}
-
-.footer-right .social-icons a {
-    font-size: 1.1rem;
-    text-decoration: none;
-    margin-left: 0.5rem;
+  border-color: rgba(0, 0, 0, 0.1);
+  margin: 0.75rem 0;
 }
 
 .footer-email {
-    color: var(--tagpo-dark);
-    text-decoration: none;
-    font-weight: 500;
+  color: var(--tagpo-dark);
+  text-decoration: none;
+  font-weight: 500;
 }
 
-.footer-email.hover {
-    text-decoration: underline;
+.footer-email:hover {
+  text-decoration: underline;
 }
 
 .footer-sub a {
-    color: var(--tagpo-dark);
-    text-decoration: none;
-    font-size: 0.8rem;
+  color: var(--tagpo-dark);
+  text-decoration: none;
+  font-size: 0.8rem;
 }
 
 .footer-sub a:hover {
-    text-decoration: underline;
-}
-
-.footer-sub small {
-    font-size: 0.8rem;
-    color: var(--tagpo-dark);
+  text-decoration: underline;
 }
 
 a:focus-visible,
 button:focus-visible,
-input:focus-visible,
-select:focus-visible {
-    outline: 3px solid var(--tagpo-primary) !important;
-    outline-offset: 2px !important;
+input:focus-visible {
+  outline: 3px solid var(--tagpo-primary) !important;
+  outline-offset: 2px !important;
 }
