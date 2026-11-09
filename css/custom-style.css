@@ -47,7 +47,8 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .search-pill-btn {
-    background-color: var(--tagpo-neutral);
+    background-color: var(--tagpo-primary);
+    opacity: 0.7;
     border-radius: 50px;
     width: 50px;
     height: 38px;
@@ -59,7 +60,8 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .search-pill-btn:hover {
-    background-color: var(--tagpo-neutral);
+    background-color: var(--tagpo-primary);
+    opacity: 0.8;
 }
 
 .tagline-badge {
