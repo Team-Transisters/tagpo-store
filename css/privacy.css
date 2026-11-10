@@ -100,7 +100,6 @@ header {
 .subtitle-text {
   font-size: 0.95rem;
   font-weight: 600;
-  font-style: italic;
   color: var(--tagpo-secondary-2);
 }
 
