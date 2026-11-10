@@ -33,6 +33,13 @@ header {
   z-index: 1030;
 }
 
+.header-logo-img {
+  max-height: 40px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
 .brand-logo-text {
   font-family: var(--font-header);
   color: var(--tagpo-secondary-2);
