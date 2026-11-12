@@ -169,12 +169,12 @@ footer {
 }
 
 .footer-hr {
-  border-color: rgba(0, 0, 0, 0.1);
+  border-color: var(--tagpo-primary);
   margin: 0.75rem 0;
 }
 
 .footer-email {
-  color: var(--tagpo-dark);
+  color: var(--tagpo-secondary-2);
   text-decoration: none;
   font-weight: 500;
 }
@@ -184,7 +184,7 @@ footer {
 }
 
 .footer-sub a {
-  color: var(--tagpo-dark);
+  color: var(--tagpo-primary);
   text-decoration: none;
   font-size: 0.8rem;
 }
