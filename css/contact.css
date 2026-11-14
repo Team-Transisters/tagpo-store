@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:wght@700&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
+
+:root {
+  --tagpo-primary: #FF7A3D;
+  --tagpo-secondary-1: #9C8817;
+  --tagpo-secondary-2: #52070F;
+  --tagpo-neutral: #FFFADD;
+  --tagpo-card-gray: #DCDCDC;
+  --tagpo-dark: #333333;
+
+  --font-header: 'Inria Sans', sans-serif;
+  --font-body: 'Poppins', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--tagpo-dark);
+  background-color: #ffffff;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+header {
+  width: 100%;
+  background-color: #ffffff;
+  z-index: 1030;
+}
+
+.header-logo-img {
+  max-height: 40px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.nav-link {
+  color: var(--tagpo-dark) !important;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--tagpo-primary) !important;
+}
+
+.search-pill-btn {
+  background-color: var(--tagpo-primary);
+  opacity: 0.85;
+  border-radius: 50px;
+  width: 44px;
+  height: 36px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: opacity 0.2s ease, background-color 0.2s ease;
+}
+
+.search-pill-btn:hover {
+  background-color: var(--tagpo-primary);
+  opacity: 1;
+}
+
+.search-icon-img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+/* PAGE HEADER */
+.content-container {
+  max-width: 960px;
+  width: 100%;
+}
+
+.page-title {
+  font-family: var(--font-header);
+  font-size: 3.4rem;
+  font-weight: 700;
+  color: var(--tagpo-primary);
+  line-height: 1.1;
+}
+
+.subtitle-text {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--tagpo-secondary-2);
+}
+
+.info-card {
+  background-color: var(--tagpo-card-gray);
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-banner {
+  background-color: var(--tagpo-secondary-2);
+  padding: 1.1rem 1.5rem;
+  text-align: center;
+}
+
+.card-banner h2 {
+  font-family: var(--font-body);
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.card-content {
+  padding: 1.75rem 2rem;
+  background-color: var(--tagpo-card-gray);
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  margin-top: -10px;
+  flex-grow: 1;
+}
+
+.info-label {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #111111;
+  margin-bottom: 0.25rem;
+}
+
+.info-value,
+.info-value a {
+  font-size: 1.05rem;
+  color: #111111;
+  text-decoration: none;
+  word-break: break-word;
+}
+
+.info-value a:hover {
+  color: var(--tagpo-primary);
+  text-decoration: underline;
+}
+
+.faq-item {
+  margin-bottom: 1.15rem;
+}
+
+.faq-item summary {
+  list-style: none;
+  cursor: pointer;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #111111;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::before {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-left: 11px solid var(--tagpo-primary);
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.faq-item[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.faq-answer {
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+  padding-left: 1.45rem;
+  font-size: 0.9rem;
+  color: var(--tagpo-dark);
+}
+
+.form-card {
+  background-color: var(--tagpo-secondary-2);
+  border-radius: 16px;
+  padding: 2rem 1.75rem;
+}
+
+.form-section-heading {
+  font-family: var(--font-body);
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.custom-input,
+.custom-textarea {
+  background-color: var(--tagpo-card-gray);
+  border: 2px solid transparent;
+  border-radius: 12px;
+  padding: 0.85rem 1.1rem;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: #222222;
+}
+
+.custom-input::placeholder,
+.custom-textarea::placeholder {
+  color: #666666;
+}
+
+.custom-input:focus,
+.custom-textarea:focus {
+  background-color: #ffffff;
+  border-color: var(--tagpo-primary);
+  box-shadow: none;
+}
+
+.submit-pill-btn {
+  background-color: var(--tagpo-secondary-1);
+  color: #ffffff;
+  font-family: var(--font-body);
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  border: none;
+  border-radius: 50px;
+  padding: 0.65rem 3.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.submit-pill-btn:hover {
+  background-color: #857413;
+  transform: translateY(-1px);
+}
+
+footer {
+  background-color: var(--tagpo-neutral);
+  color: var(--tagpo-dark);
+  font-size: 0.85rem;
+  font-family: var(--font-body);
+  width: 100% !important;
+  margin-top: auto;
+}
+
+.footer-logo-img {
+  max-height: 48px;
+  width: auto;
+  object-fit: contain;
+}
+
+.social-icons {
+  display: inline-flex;
+  align-items: center;
+}
+
+.social-link {
+  text-decoration: none !important;
+  display: inline-block;
+  line-height: 0;
+}
+
+.social-icon-img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  vertical-align: middle;
+  transition: opacity 0.2s ease;
+}
+
+.social-link:hover .social-icon-img {
+  opacity: 0.75;
+}
+
+.footer-hr {
+  border-color: var(--tagpo-primary);
+  margin: 0.75rem 0;
+}
+
+.footer-email {
+  color: var(--tagpo-secondary-2);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer-email:hover {
+  text-decoration: underline;
+}
+
+.footer-sub a {
+  color: var(--tagpo-primary);
+  text-decoration: none;
+  font-size: 0.8rem;
+}
+
+.footer-sub a:hover {
+  text-decoration: underline;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+summary:focus-visible {
+  outline: 3px solid var(--tagpo-primary) !important;
+  outline-offset: 2px !important;
+}
