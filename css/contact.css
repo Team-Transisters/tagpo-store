@@ -87,7 +87,7 @@ header {
 }
 
 .search-pill-text {
-  color: #ffffff;
+  color: var(--tagpo-secondary-2);
   font-family: var(--font-body);
   font-size: 0.9 rem;
   font-weight: 600;
