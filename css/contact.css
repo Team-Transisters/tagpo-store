@@ -89,7 +89,7 @@ header {
 .search-pill-text {
   color: #ffffff;
   font-family: var(--font-body);
-  font-size: 0.9 rem;
+  font-size: 0.9rem;
   font-weight: 600;
   opacity:0;
   max-width: 0;
@@ -170,6 +170,7 @@ header {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.14);
 }
 
 .card-banner {
@@ -244,6 +245,7 @@ header {
   border-top: 7px solid transparent;
   border-bottom: 7px solid transparent;
   border-left: 11px solid var(--tagpo-primary);
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.25));
   transition: transform 0.2s ease;
   flex-shrink: 0;
 }
@@ -264,6 +266,7 @@ header {
   background-color: var(--tagpo-secondary-2);
   border-radius: 16px;
   padding: 2rem 1.75rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.16);
 }
 
 .form-section-heading {
@@ -310,12 +313,14 @@ header {
   border-radius: 50px;
   padding: 0.65rem 3.5rem;
   cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0,0 ,0, 0.25);
   transition: background-color 0.2s ease, transform 0.15s ease;
 }
 
 .submit-pill-btn:hover {
   background-color: #857413;
   transform: translateY(-1px);
+  box-shadow: 0, 6px 14px rgba(0, 0, 0, 0.3);
 }
 
 footer {
