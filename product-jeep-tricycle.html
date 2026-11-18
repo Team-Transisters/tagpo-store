@@ -33,114 +33,98 @@
     </nav>
     </header>
 
-    <body>
-    </main>
+    <main class="container-fluid product-page">
 
         <div class="product-category">
             <span></span>
             <p>Wear Filipino Pride</p>
             <span></span>
         </div>
-    
-        <main class="single-product">
-    
+
+        <section class="single-product">
             <div class="product-gallery">
-    
                 <div class="main-image">
                     <img
                         src="images/jeep-tricycle-main-image.png"
                         alt="Jeep and Tricycle Pilipinas Tee">
                 </div>
-    
+
                 <div class="thumbnail-images">
-    
+
                     <img
-                        src="images/jeep-tricycle-image-1.png"
+                        src="images/jeep-tricycle-front-image.png"
                         alt="Front view">
-    
+
                     <img
-                        src="images/jeep-tricycle-image-2.png"
+                        src="images/jeep-tricycle-back-image.png"
                         alt="Back view">
-    
+
                     <img
-                        src="images/jeep-tricycle-image-3.png"
+                        src="images/jeep-tricycle-alt-image.png"
                         alt="Side view">
-    
+
                 </div>
-    
             </div>
-    
+
             <div class="product-details">
-    
-                <h1>Jeep & Tricycle Pilipinas Tee</h1>
-    
+                <h1>Jeep &amp; Tricycle Pilipinas Tee</h1>
                 <h2 class="product-price">₱399.00</h2>
-    
-                <div class="product-options">
-    
+                <div class="product-options"> 
                     <div class="size-section">
-    
-                        <p><strong>Size:</strong> Medium</p>
-    
+                        <p>
+                            <strong>Size:</strong>
+                            <span id="selected-size">Medium</span>
+                        </p>
                         <div class="size-buttons">
-                            <button>XS</button>
-                            <button>S</button>
-                            <button class="active">M</button>
-                            <button>L</button>
-                            <button>XL</button>
+                            <button type="button" data-size="XS">XS</button>
+                            <button type="button" data-size="S">S</button>
+                            <button type="button" data-size="M"
+                                    class="active" aria-pressed="true">M</button>
+                            <button type="button" data-size="L">L</button>
+                            <button type="button" data-size="XL">XL</button>
                         </div>
-    
                     </div>
-    
                     <div class="quantity-section">
-    
                         <p><strong>Quantity:</strong></p>
-    
                         <div class="quantity-control">
-                            <button>-</button>
-                            <span>1</span>
-                            <button>+</button>
+                            <button type="button"
+                                    id="decrease-quantity"
+                                    aria-label="Decrease quantity">−</button>
+
+                            <span id="quantity">1</span>
+                            <button type="button"
+                                    id="increase-quantity"
+                                    aria-label="Increase quantity">+</button>
                         </div>
-    
                     </div>
-    
                 </div>
-    
                 <div class="product-actions">
-    
-                    <button class="order-button">
+                    <button type="button" class="order-button">
                         Order Now
                     </button>
-    
-                    <button class="wishlist-button">
+                    <button type="button" class="wishlist-button">
                         Wish List
                     </button>
-    
                 </div>
-    
                 <div class="product-description">
-    
                     <p>
                         Ride with pride! Celebrate the streets and culture
                         of the Philippines.
                     </p>
-    
                     <p>
                         Featuring colorful jeepney-inspired graphics and
-                        bold lettering, the Jeep & Tricycle Pilipinas Tee
+                        bold lettering, the Jeep &amp; Tricycle Pilipinas Tee
                         celebrates Filipino culture through a modern
                         streetwear design. Its classic black color and
                         comfortable fit make it perfect for everyday wear
                         and casual outings.
                     </p>
-    
                     <p>
                         A simple yet eye-catching statement piece for
                         anyone proud of their Filipino roots.
                     </p>
-    
+
                     <div class="product-specifications">
-    
                         <p><strong>Color:</strong> White</p>
                         <p><strong>Sizes:</strong> XS, S, M, L, XL</p>
                         <p><strong>Weight:</strong> 0.03kg</p>
@@ -154,11 +138,10 @@
                             to maintain print quality and fabric condition.
                             Avoid mixing with dissimilar colored garments.
                         </p>
-                        
                     </div>
                 </div>
             </div>
-            
+        </section>
     </main>
   
     <footer class="mt-auto py-4 border-top w-100">
