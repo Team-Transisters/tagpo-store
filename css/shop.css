@@ -211,9 +211,11 @@ header {
     transform: translateY(-5px);
 }
 
-.product-card a {
+.product-card a,
+.product-card a h3,
+.product-card a p,
+.product-card a span {
     text-decoration: none;
-    color: inherit;
 }
 
 .product-card img {
