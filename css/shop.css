@@ -180,6 +180,10 @@ h2 {
   line-height: 1.1;
 }
 
+a {
+      text-decoration: none;
+    }
+
 .product-section {
     padding: 22px 9% 25px;
 }
@@ -256,8 +260,6 @@ h2 {
     padding-top: 35px;
     padding-bottom: 40px;
 }
-
-
 
 footer {
   background-color: var(--tagpo-neutral);
