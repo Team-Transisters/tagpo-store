@@ -172,6 +172,13 @@ header {
   color: var(--tagpo-secondary-2);
 }
 
+h2 {
+  font-family: var(--font-header);
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--tagpo-secondary-2);
+}
+
 .product-section {
     padding: 22px 9% 25px;
 }
