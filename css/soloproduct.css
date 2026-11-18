@@ -1,0 +1,452 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:wght@700&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
+
+:root {
+  --tagpo-primary: #FF7A3D;
+  --tagpo-secondary-1: #9C8817;
+  --tagpo-secondary-2: #52070F;
+  --tagpo-neutral: #FFFADD;
+  --tagpo-dark: #333333;
+
+  --font-header: 'Inria Sans', sans-serif;
+  --font-body: 'Poppins', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--tagpo-dark);
+  background-color: #ffffff;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+header {
+  width: 100%;
+  background-color: #ffffff;
+  z-index: 1030;
+}
+
+.header-logo-img {
+  height: 40px;
+  width: auto;
+  min-width: 110px;
+  object-fit: contain;
+  display: block;
+}
+
+.brand-logo-text {
+  font-family: var(--font-header);
+  color: var(--tagpo-secondary-2);
+  font-weight: 700;
+  font-size: 2.2rem;
+  letter-spacing: -0.5px;
+  text-decoration: none;
+}
+
+.nav-link {
+  color: var(--tagpo-dark) !important;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--tagpo-primary) !important;
+}
+
+.search-pill-btn {
+  background-color: var(--tagpo-primary);
+  opacity: 0.85;
+  border-radius: 50px;
+  width: 44px;
+  height: 36px;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 13px;
+  gap: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: width 0.28s ease, padding 0.28s, gap 0.28s ease, opacity 0.2s ease, background-color 0.2s ease;
+}
+
+.search-pill-btn:hover,
+.search-pill-btn:focus-visible {
+  width: 116px;
+  padding: 0 16px;
+  gap: 8px;
+  background-color: var(--tagpo-primary);
+  opacity: 1;
+}
+
+.search-icon-img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.search-pill-text {
+  color: #ffffff;
+  font-family: var(--font-body);
+  font-size: 0.9 rem;
+  font-weight: 600;
+  opacity:0;
+  max-width: 0;
+  overflow: hidden;
+  transition: opacity 0.2s ease 0.06s, max-width 0.28 ease;
+}
+
+.search-pill-btn:hover .search-pill-text,
+.search-pill-btn:focus-visible .search-pill-text {
+  opacity: 1;
+  max-width: 70px;
+}
+
+.tagpo-search-drawer {
+  background-color: #ffffff;
+  border-top: 1px solid #eaeaea;
+  padding: 0.75rem 0;
+  display: none;
+}
+
+.tagpo-search-drawer.is-open {
+  display: block;
+}
+
+.tagpo-search-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 122, 61, 0.25);
+}
+
+.tagpo-search-results {
+  list-style: none;
+  margin: 0.5rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tagpo-search-results a {
+  display: inline-block;
+  padding: 0.3rem 0.85rem;
+  border-radius: 50px;
+  background-color: var(--tagpo-neutral);
+  color: var(--tagpo-secondary-2);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid var(--tagpo-primary);
+}
+
+.tagpo-search-results a:hover {
+  background-color: var(--tagpo-primary);
+  color: #ffffff;
+}
+
+.content-container {
+  max-width: 900px;
+  width: 100%;
+}
+
+.page-title {
+  font-family: var(--font-header);
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: var(--tagpo-primary);
+  line-height: 1.1;
+}
+
+.subtitle-text {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--tagpo-secondary-2);
+}
+
+.product-category {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    margin: 0 auto 16px;
+}
+
+.product-category p {
+    background: #fffbe0;
+    color: #59091b;
+    padding: 5px 25px;
+    border-radius: 9px;
+    font-size: 13px;
+}
+
+.product-category span {
+    width: 34px;
+    height: 23px;
+    background: #fffbe0;
+    border-radius: 8px;
+}
+
+.single-product {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 25px;
+    padding: 0 6% 35px;
+}
+
+.product-gallery {
+    width: 100%;
+}
+
+.main-image {
+    width: 100%;
+    height: 292px;
+    border: 2px solid #59091b;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.main-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.thumbnail-images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.thumbnail-images img {
+    width: 100%;
+    height: 91px;
+    object-fit: cover;
+    border: 2px solid #59091b;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.thumbnail-images img:hover {
+    border-color: #a99418;
+    transform: translateY(-3px);
+}
+
+.product-details {
+    width: 100%;
+}
+
+.product-details h1 {
+    font-family: Georgia, serif;
+    font-size: 25px;
+    color: #59091b;
+    margin-bottom: 3px;
+}
+
+.product-price {
+    color: #a99418;
+    font-size: 22px;
+    margin-bottom: 3px;
+}
+
+.product-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 3px 0 12px;
+}
+
+.size-section p,
+.quantity-section p {
+    font-size: 13px;
+    margin-bottom: 7px;
+    color: #222;
+}
+
+.size-section strong,
+.quantity-section strong {
+    color: #59091b;
+}
+
+.size-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.size-buttons button {
+    width: 31px;
+    height: 31px;
+    background: #fffbe0;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 10px;
+    color: #111;
+}
+
+.size-buttons button.active {
+    border: 2px solid #59091b;
+    background: #fffbe0;
+}
+
+.size-buttons button:hover {
+    border: 1px solid #59091b;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 75px;
+    height: 31px;
+    border: 1.5px solid #59091b;
+    border-radius: 6px;
+}
+
+.quantity-control button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    color: #111;
+}
+
+.quantity-control span {
+    font-size: 12px;
+}
+
+.product-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 10px;
+}
+
+.order-button,
+.wishlist-button {
+    width: 100%;
+    height: 26px;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 11px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.order-button {
+    background: #a99418;
+}
+
+.wishlist-button {
+    background: #f5804c;
+}
+
+.order-button:hover {
+    background: #887812;
+}
+
+.wishlist-button:hover {
+    background: #e66d3c;
+}
+
+.product-description {
+    background: #fffbe0;
+    padding: 11px;
+    border-radius: 10px;
+    color: #222;
+    font-size: 9px;
+    line-height: 1.5;
+}
+
+.product-description p {
+    margin-bottom: 8px;
+}
+
+.product-specifications p {
+    margin-bottom: 1px;
+}
+
+footer {
+  background-color: var(--tagpo-neutral);
+  color: var(--tagpo-dark);
+  font-size: 0.85rem;
+  font-family: var(--font-body);
+  width: 100% !important;
+  margin-top: auto;
+}
+
+.footer-logo-img {
+  max-height: 48px;
+  width: auto;
+  object-fit: contain;
+}
+
+.social-icons {
+  display: inline-flex;
+  align-items: center;
+}
+
+.social-link {
+  text-decoration: none !important;
+  border: none !important;
+  outline: none;
+  display: inline-block;
+  line-height: 0;
+}
+
+.social-icon-img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  vertical-align: middle;
+  transition: opacity 0.2s ease;
+}
+
+.social-link:hover .social-icon-img {
+  opacity: 0.75;
+}
+
+.footer-hr {
+  border-color: var(--tagpo-primary);
+  margin: 0.75rem 0;
+}
+
+.footer-email {
+  color: var(--tagpo-secondary-2);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer-email:hover {
+  text-decoration: underline;
+}
+
+.footer-sub a {
+  color: var(--tagpo-primary);
+  text-decoration: none;
+  font-size: 0.8rem;
+}
+
+.footer-sub a:hover {
+  text-decoration: underline;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid var(--tagpo-primary) !important;
+  outline-offset: 2px !important;
+}
