@@ -105,3 +105,49 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const sizeButtons = document.querySelectorAll(".size-buttons button");
+    const selectedSize = document.getElementById("selected-size");
+
+    const sizeNames = {
+        XS: "Extra Small",
+        S: "Small",
+        M: "Medium",
+        L: "Large",
+        XL: "Extra Large"
+    };
+
+    sizeButtons.forEach(function (button) {
+        button.addEventListener("click", function () {
+            sizeButtons.forEach(function (btn) {
+                btn.classList.remove("active");
+                btn.setAttribute("aria-pressed", "false");
+            });
+          
+            button.classList.add("active");
+            button.setAttribute("aria-pressed", "true");
+            selectedSize.textContent =
+                sizeNames[button.dataset.size];
+        });
+    });
+
+    const quantityDisplay = document.getElementById("quantity");
+    const decreaseButton = document.getElementById("decrease-quantity");
+    const increaseButton = document.getElementById("increase-quantity");
+  
+    let quantity = 1;
+
+    decreaseButton.addEventListener("click", function () {
+        if (quantity > 1) {
+            quantity--;
+            quantityDisplay.textContent = quantity;
+        }
+    });
+  
+    increaseButton.addEventListener("click", function () {
+        quantity++;
+        quantityDisplay.textContent = quantity;
+    });
+});
