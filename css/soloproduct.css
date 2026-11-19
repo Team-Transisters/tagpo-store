@@ -383,7 +383,6 @@ header {
 
 .wishlist-button:hover {
     background: var(--tagpo-primary);
-    border: none;
     color: white;
 }
 
