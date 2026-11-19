@@ -264,3 +264,59 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const orderButton = document.querySelector("#order-now");
+
+    if (!orderButton) return;
+    orderButton.addEventListener("click", function () {
+        const productName = document.querySelector(".product-title")?.textContent.trim();
+        const selectedSize = document.querySelector("#selected-size")?.textContent.trim();
+        const quantity = document.querySelector("#quantity")?.textContent.trim();
+
+        if (!productName || !selectedSize || !quantity) {
+            alert("Please select a product size and quantity.");
+            return;
+        }
+
+        const recipient = "orders@examplewebsite142.com";
+        const subject = "TAGPO | New Order Request";
+        const body = `
+        HELLO TAGPO TEAM!
+        
+        I would like to place an order with the following details:
+        
+        ================================
+                   ORDER DETAILS
+        ================================
+        
+        Product:  ${productName}
+        Size:     ${selectedSize}
+        Quantity: ${quantity}
+        
+        ================================
+                CUSTOMER INFORMATION
+        ================================
+        
+        Please use the sender's email address
+        to contact me regarding this order.
+        
+        ================================
+        
+        Thank you!
+        
+        Best regards,
+        (Insert your name)
+        Tagpo Customer
+        `.trim();
+
+        const mailtoLink =
+            `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+        window.location.href = mailtoLink;
+    });
+});
+
+
