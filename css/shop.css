@@ -197,14 +197,18 @@ header {
 .product-grid {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     gap: 24px;
+    width: 100%;
+    max-width: 1196px;
+    margin: 0 auto;
 }
 
 .product-card {
-    flex: 1 1 220px;
-    max-width: 220px;
-    min-width: 180px;
+    flex: 0 0 220px;
+    width: 220px;
+    max-width: 100%;
     background: var(--tagpo-neutral);
     border-radius: 20px;
     padding: 7px;
