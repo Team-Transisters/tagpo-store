@@ -492,6 +492,9 @@ header {
     .product-details h1 {
         font-size: 22px;
     }
+    .product-description {
+        font-size: 13px;
+        line-height: 1.6;
 }
 
 @media (max-width: 480px) {
@@ -506,7 +509,7 @@ header {
         height: 30px;
     }
     .product-description {
-        font-size: 9px;
+        font-size: 11px;
     }
     .footer-sub {
         flex-direction: column;
