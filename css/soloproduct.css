@@ -360,7 +360,6 @@ header {
     height: 29px;
     border: none;
     border-radius: 20px;
-    color: white;
     font-weight: bold;
     font-size: 14px;
     cursor: pointer;
@@ -368,11 +367,14 @@ header {
 }
 
 .order-button {
-    background: #a99418;
+    background: var(--tagpo-secondary-1);
+    color: white;
 }
 
 .wishlist-button {
-    background: #f5804c;
+    background: white;
+    border: 2px solid var(--tagpo-primary);
+    color: var(--tagpo-primary);
 }
 
 .order-button:hover {
@@ -380,7 +382,9 @@ header {
 }
 
 .wishlist-button:hover {
-    background: #e66d3c;
+    background: var(--tagpo-primary);
+    border: none;
+    color: white;
 }
 
 .product-description {
