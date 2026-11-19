@@ -152,43 +152,81 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+
+// =============================================
+// UNIVERSAL PRODUCT IMAGE GALLERY
+// Works on all Tagpo product pages
+// =============================================
+
 document.addEventListener("DOMContentLoaded", function () {
-    const mainImage = document.getElementById("main-product-image");
-    const thumbnails = document.querySelectorAll(".thumbnail-images img");
-    const previousButton = document.getElementById("previous-image");
-    const nextButton = document.getElementById("next-image");
+    const productGalleries = document.querySelectorAll(".product-gallery");
 
-    const productImages = [
-        mainImage,
-        ...thumbnails
-    ].map(function (image) {
-        return {
-            src: image.src,
-            alt: image.alt
-        };
-    });
+    productGalleries.forEach(function (gallery) {
+        const mainImage = gallery.querySelector(".main-product-image");
+        const thumbnailGallery = gallery.querySelector(".thumbnail-images");
+        const previousButton = gallery.querySelector(".arrow-left");
+        const nextButton = gallery.querySelector(".arrow-right");
 
-    let currentImage = 0;
+        if (
+            !mainImage ||
+            !thumbnailGallery ||
+            !previousButton ||
+            !nextButton
+        ) {
+            return;
+        }
 
-    function showImage(index) {
-        currentImage =
-            (index + productImages.length) %
-            productImages.length;
-        mainImage.src = productImages[currentImage].src;
-        mainImage.alt = productImages[currentImage].alt;
-    }
+        const productImages = [
+            {
+                src: mainImage.getAttribute("src"),
+                alt: mainImage.alt
+            },
 
-    nextButton.addEventListener("click", function () {
-        showImage(currentImage + 1);
-    });
+            ...Array.from(thumbnailGallery.querySelectorAll("img"))
+                .map(function (image) {
+                    return {
+                        src: image.getAttribute("src"),
+                        alt: image.alt
+                    };
+                })
+        ];
 
-    previousButton.addEventListener("click", function () {
-        showImage(currentImage - 1);
-    });
- 
-    thumbnails.forEach(function (thumbnail, index) {
-        thumbnail.addEventListener("click", function () {
-            showImage(index + 1);
+        let currentImage = 0;
+
+        function showImage(index) {
+            currentImage =
+                (index + productImages.length) %
+                productImages.length;
+            mainImage.src = productImages[currentImage].src;
+            mainImage.alt = productImages[currentImage].alt;
+            updateThumbnails();
+        }
+
+        function updateThumbnails() {
+            thumbnailGallery.innerHTML = "";
+            productImages.forEach(function (image, index) {
+                if (index !== currentImage) {
+                    const thumbnail = document.createElement("img");
+                    thumbnail.src = image.src;
+                    thumbnail.alt = image.alt;
+                    thumbnail.loading = "lazy";
+                    thumbnail.addEventListener("click", function () {
+                        showImage(index);
+                    });
+                    thumbnailGallery.appendChild(thumbnail);
+                }
+            });
+        }
+
+        nextButton.addEventListener("click", function () {
+            showImage(currentImage + 1);
         });
+
+        previousButton.addEventListener("click", function () {
+            showImage(currentImage - 1);
+        });
+        if (productImages.length > 0) {
+            showImage(0);
+        }
     });
 });
