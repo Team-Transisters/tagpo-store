@@ -405,35 +405,59 @@ header {
     margin-bottom: 10px;
 }
 
-.order-button,
-.wishlist-button {
+.checkout-button {
     width: 100%;
-    height: 29px;
-    border: none;
-    border-radius: 20px;
+    padding: 8px 15px;
+    background-color: #a18d16;
+    color: white;
+    border: 2px solid #a18d16;
+    border-radius: 25px;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 15px;
     cursor: pointer;
     transition: 0.3s ease;
 }
 
-.order-button {
-    background: var(--tagpo-secondary-1);
-    color: white;
+.checkout-button .hover-text {
+    display: none;
 }
 
+.checkout-button:hover .default-text {
+    display: none;
+}
+
+.checkout-button:hover .hover-text {
+    display: inline;
+}
+
+.checkout-button:hover {
+    background-color: #59091b;
+    border-color: #59091b;
+}
+
+/* Wishlist button */
 .wishlist-button {
-    background: white;
-    border: 2px solid var(--tagpo-primary);
-    color: var(--tagpo-primary);
+    width: 100%;
+    padding: 8px 15px;
+    background-color: transparent;
+    color: #ff7043;
+    border: 2px solid #ff7043;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s ease;
 }
 
-.order-button:hover {
-    background: #887812;
+.wishlist-button.active {
+    background-color:  var(--tagpo-neutral);
+    color: white;
+    border-color: #ff7043;
 }
 
 .wishlist-button:hover {
-    background: #ff7a3d2a;
+    background-color: #ff7043;
+    color: white;
 }
 
 .product-description {
