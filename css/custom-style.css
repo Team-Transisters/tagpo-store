@@ -218,12 +218,13 @@ main{
     font-family: var(--tagpo-font-body);
     font-weight: 600;
     text-decoration: none;
-    transition: 0.4s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.2s ease, transform 0.15s ease;
 }
 
 .hero-content .hero-btn:hover{
-    background-color: var(--tagpo-neutral);
-    color: var(--tagpo-secondary-2);
+    background-color: #F9F3CA;
+    transform: translateY(-1px);
 }
 
 .product-card a,
@@ -391,13 +392,14 @@ main{
     font-family: var(--tagpo-font-body);
     font-weight: 600;
     text-decoration: none;
-    transition: 0.4s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.2s ease, transform 0.15s ease;
 }
 
 .about-content button:hover{
-    transform: scale(1.05);
-    background-color: var(--tagpo-neutral);
-    color: var(--tagpo-secondary-2);
+    background-color: #857413;
+    color: #ffffff;
+    transform: translateY(-1px);
 }
 
 footer {
