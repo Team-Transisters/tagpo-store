@@ -226,6 +226,13 @@ main{
     color: var(--tagpo-secondary-2);
 }
 
+.product-card a,
+.product-card a h3,
+.product-card a p,
+.product-card a span {
+     text-decoration: none;
+}
+
 #products-container{
     display: flex;
     justify-content: center;
