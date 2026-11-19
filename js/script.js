@@ -247,3 +247,20 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const wishlistButton = document.querySelector(".wishlist-button");
+
+    if (wishlistButton) {
+        wishlistButton.addEventListener("click", function () {
+            const isAdded = wishlistButton.classList.toggle("active");
+            if (isAdded) {
+                wishlistButton.textContent = "Added to Wishlist";
+                wishlistButton.setAttribute("aria-pressed", "true");
+            } else {
+                wishlistButton.textContent = "Add to Wishlist";
+                wishlistButton.setAttribute("aria-pressed", "false");
+            }
+        });
+    }
+});
