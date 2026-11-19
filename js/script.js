@@ -109,6 +109,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 document.addEventListener("DOMContentLoaded", function () {
+    const featuredSection = document.querySelector(".product-section:not(.all-products)");
+    if (featuredSection) {
+        const featuredCount = featuredSection.querySelectorAll(".product-card").length;
+        const countDisplay = featuredSection.querySelector('[data-count="featured"]');
+        if (countDisplay) {
+            countDisplay.textContent =
+                `${featuredCount} ${featuredCount === 1 ? "product" : "products"}`;
+        }
+    }
+
+    const allProductsSection = document.querySelector(".all-products");
+    if (allProductsSection) {
+        const allCount = allProductsSection.querySelectorAll(".product-card").length;
+        const countDisplay = allProductsSection.querySelector('[data-count="all"]');
+        if (countDisplay) {
+            countDisplay.textContent =
+                `${allCount} ${allCount === 1 ? "product" : "products"}`;
+        }
+    }
+
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
     const sizeButtons = document.querySelectorAll(".size-buttons button");
     const selectedSize = document.getElementById("selected-size");
 
@@ -151,7 +175,6 @@ document.addEventListener("DOMContentLoaded", function () {
         quantityDisplay.textContent = quantity;
     });
 });
-
 
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -248,6 +271,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+
 document.addEventListener("DOMContentLoaded", function () {
     const wishlistButton = document.querySelector(".wishlist-button");
 
@@ -264,7 +288,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
-
 
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -318,5 +341,3 @@ document.addEventListener("DOMContentLoaded", function () {
         window.location.href = mailtoLink;
     });
 });
-
-
