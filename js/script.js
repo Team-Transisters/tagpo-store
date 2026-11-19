@@ -151,3 +151,44 @@ document.addEventListener("DOMContentLoaded", function () {
         quantityDisplay.textContent = quantity;
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const mainImage = document.getElementById("main-product-image");
+    const thumbnails = document.querySelectorAll(".thumbnail-images img");
+    const previousButton = document.getElementById("previous-image");
+    const nextButton = document.getElementById("next-image");
+
+    const productImages = [
+        mainImage,
+        ...thumbnails
+    ].map(function (image) {
+        return {
+            src: image.src,
+            alt: image.alt
+        };
+    });
+
+    let currentImage = 0;
+
+    function showImage(index) {
+        currentImage =
+            (index + productImages.length) %
+            productImages.length;
+        mainImage.src = productImages[currentImage].src;
+        mainImage.alt = productImages[currentImage].alt;
+    }
+
+    nextButton.addEventListener("click", function () {
+        showImage(currentImage + 1);
+    });
+
+    previousButton.addEventListener("click", function () {
+        showImage(currentImage - 1);
+    });
+ 
+    thumbnails.forEach(function (thumbnail, index) {
+        thumbnail.addEventListener("click", function () {
+            showImage(index + 1);
+        });
+    });
+});
