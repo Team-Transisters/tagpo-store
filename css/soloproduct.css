@@ -456,7 +456,7 @@ header {
 
 .wishlist-button:hover {
     background-color: #ff7a3d2a;;
-    color: white;
+    color: var(--tagpo-primary);
 }
 
 .product-description {
