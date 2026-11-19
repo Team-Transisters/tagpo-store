@@ -153,6 +153,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+
 document.addEventListener("DOMContentLoaded", function () {
     const productGalleries = document.querySelectorAll(".product-gallery");
 
@@ -162,12 +163,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const previousButton = gallery.querySelector(".arrow-left");
         const nextButton = gallery.querySelector(".arrow-right");
 
-        if (
-            !mainImage ||
-            !thumbnailGallery ||
-            !previousButton ||
-            !nextButton
-        ) {
+        if (!mainImage || !thumbnailGallery || !previousButton || !nextButton) {
             return;
         }
 
@@ -176,51 +172,78 @@ document.addEventListener("DOMContentLoaded", function () {
                 src: mainImage.getAttribute("src"),
                 alt: mainImage.alt
             },
-
-            ...Array.from(thumbnailGallery.querySelectorAll("img"))
-                .map(function (image) {
-                    return {
-                        src: image.getAttribute("src"),
-                        alt: image.alt
-                    };
-                })
+            ...Array.from(thumbnailGallery.querySelectorAll("img")).map(function (image) {
+                return {
+                    src: image.getAttribute("src"),
+                    alt: image.alt
+                };
+            })
         ];
 
         let currentImage = 0;
+        let direction = "right";
 
-        function showImage(index) {
+        function showImage(index, newDirection) {
             currentImage =
-                (index + productImages.length) %
-                productImages.length;
+                (index + productImages.length) % productImages.length;
+
+            if (newDirection) {
+                direction = newDirection;
+            }
+
             mainImage.src = productImages[currentImage].src;
             mainImage.alt = productImages[currentImage].alt;
+
             updateThumbnails();
         }
 
         function updateThumbnails() {
             thumbnailGallery.innerHTML = "";
-            productImages.forEach(function (image, index) {
-                if (index !== currentImage) {
-                    const thumbnail = document.createElement("img");
-                    thumbnail.src = image.src;
-                    thumbnail.alt = image.alt;
-                    thumbnail.loading = "lazy";
-                    thumbnail.addEventListener("click", function () {
-                        showImage(index);
-                    });
-                    thumbnailGallery.appendChild(thumbnail);
+
+            let thumbnailOrder = [];
+
+            if (direction === "right") {
+                for (let i = 1; i < productImages.length; i++) {
+                    thumbnailOrder.push(
+                        (currentImage + i) % productImages.length
+                    );
                 }
+            } else {
+                // Arrange thumbnails in leftward navigation order
+                for (let i = 1; i < productImages.length; i++) {
+                    thumbnailOrder.push(
+                        (currentImage - i + productImages.length) %
+                        productImages.length
+                    );
+                }
+            }
+
+            thumbnailOrder.forEach(function (index) {
+                const image = productImages[index];
+                const thumbnail = document.createElement("img");
+
+                thumbnail.src = image.src;
+                thumbnail.alt = image.alt;
+                thumbnail.loading = "lazy";
+
+                thumbnail.addEventListener("click", function () {
+                    showImage(index);
+                });
+
+                thumbnailGallery.appendChild(thumbnail);
             });
         }
 
         nextButton.addEventListener("click", function () {
-            showImage(currentImage + 1);
+            showImage(currentImage + 1, "right");
         });
+
         previousButton.addEventListener("click", function () {
-            showImage(currentImage - 1);
+            showImage(currentImage - 1, "left");
         });
+
         if (productImages.length > 0) {
-            showImage(0);
+            showImage(0, "right");
         }
     });
 });
