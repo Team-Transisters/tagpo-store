@@ -405,7 +405,7 @@ header {
     margin-bottom: 10px;
 }
 
-.checkout-button {
+.order-button {
     width: 100%;
     padding: 8px 15px;
     background-color: var(--tagpo-secondary-1);
@@ -418,19 +418,19 @@ header {
     transition: 0.3s ease;
 }
 
-.checkout-button .hover-text {
+.order-button .hover-text {
     display: none;
 }
 
-.checkout-button:hover .default-text {
+.order-button:hover .default-text {
     display: none;
 }
 
-.checkout-button:hover .hover-text {
+.order-button:hover .hover-text {
     display: inline;
 }
 
-.checkout-button:hover {
+.order-button:hover {
     background-color: var(--tagpo-secondary-2);
     border-color: var(--tagpo-secondary-2);
 }
