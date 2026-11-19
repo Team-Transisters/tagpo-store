@@ -225,6 +225,7 @@ header {
     overflow: hidden;
     border: 2px solid var(--tagpo-secondary-2);
     border-radius: 10px;
+    box-shadow: inset 4px 4px 10px 0 rgba(0, 0, 0, 0.25);
 }
 
 .main-image > img:first-child {
