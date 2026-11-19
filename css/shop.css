@@ -150,7 +150,7 @@ header {
 
 .tagpo-search-results a:hover {
   background-color: var(--tagpo-primary);
-  color: #ffffff;
+  color: white;
 }
 
 .content-container {
@@ -232,7 +232,7 @@ header {
     height: 195px;
     object-fit: cover;
     border-radius: 15px;
-    background: #77713d;
+    background: var(--tagpo-secondary-1);
 }
 
 .product-info {
@@ -240,22 +240,22 @@ header {
 }
 
 .product-info h3 {
-    font-size: 12px;
+    font-size: 14px;
     margin-bottom: 3px;
-    color: #550719;
+    color: var(--tagpo-secondary-2);
 }
 
 .product-info p {
-    font-size: 11px;
-    color: #a35c4c;
+    font-size: 12px;
+    color: var(--tagpo-dark);
     margin-bottom: 7px;
 }
 
 .price {
     display: inline-block;
-    background: #a99418;
+    background: var(--tagpo-secondary-1);
     color: white;
-    font-size: 10px;
+    font-size: 14px;
     padding: 4px 10px;
     border-radius: 20px;
 }
