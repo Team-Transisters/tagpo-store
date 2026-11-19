@@ -52,28 +52,7 @@ body {
 header {
   width: 100%;
   background-color: #ffffff;
-  border-bottom: 1px solid #dee2e6;
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
-  position: sticky;
-  top: 0;
   z-index: 1030;
-}
-
-.navbar {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-}
-
-.navbar .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.navbar-brand {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
 }
 
 .header-logo-img {
@@ -84,32 +63,23 @@ header {
   display: block;
 }
 
-.nav-right {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-}
-
-.nav {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  list-style: none;
-  gap: 1.35rem;
+.brand-logo-text {
+  font-family: var(--font-header);
+  color: var(--tagpo-secondary-2);
+  font-weight: 700;
+  font-size: 2.2rem;
+  letter-spacing: -0.5px;
+  text-decoration: none;
 }
 
 .nav-link {
-  color: var(--tagpo-dark);
-  font-weight: 600;
-  font-size: 0.95rem;
-  text-decoration: none;
-  padding: 0.5rem;
+  color: var(--tagpo-dark) !important;
   transition: color 0.2s ease;
 }
 
 .nav-link:hover,
 .nav-link.active {
-  color: var(--tagpo-primary);
+  color: var(--tagpo-primary) !important;
 }
 
 .search-pill-btn {
@@ -127,7 +97,7 @@ header {
   overflow: hidden;
   white-space: nowrap;
   cursor: pointer;
-  transition: width 0.28s ease, padding 0.28s ease, gap 0.28s ease, opacity 0.2s ease;
+  transition: width 0.28s ease, padding 0.28s, gap 0.28s ease, opacity 0.2s ease, background-color 0.2s ease;
 }
 
 .search-pill-btn:hover,
@@ -135,6 +105,7 @@ header {
   width: 116px;
   padding: 0 16px;
   gap: 8px;
+  background-color: var(--tagpo-primary);
   opacity: 1;
 }
 
@@ -148,12 +119,12 @@ header {
 .search-pill-text {
   color: #ffffff;
   font-family: var(--font-body);
-  font-size: 0.9rem;
+  font-size: 0.9 rem;
   font-weight: 600;
-  opacity: 0;
+  opacity:0;
   max-width: 0;
   overflow: hidden;
-  transition: opacity 0.2s ease 0.06s, max-width 0.28s ease;
+  transition: opacity 0.2s ease 0.06s, max-width 0.28 ease;
 }
 
 .search-pill-btn:hover .search-pill-text,
@@ -173,15 +144,6 @@ header {
   display: block;
 }
 
-.tagpo-search-input {
-  width: 100%;
-  padding: 0.5rem 0.9rem;
-  border: 1px solid #dee2e6;
-  border-radius: 8px;
-  font-family: var(--font-body);
-  font-size: 0.9rem;
-}
-
 .tagpo-search-input:focus {
   outline: none;
   box-shadow: 0 0 0 3px rgba(255, 122, 61, 0.25);
@@ -189,7 +151,8 @@ header {
 
 .tagpo-search-results {
   list-style: none;
-  margin-top: 0.5rem;
+  margin: 0.5rem 0 0;
+  padding: 0;
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
@@ -213,11 +176,8 @@ header {
 }
 
 .content-container {
-  max-width: 960px;
+  max-width: 900px;
   width: 100%;
-  padding-top: 2.5rem;
-  padding-bottom: 3.5rem;
-  flex: 1 0 auto;
 }
 
 .hero-row {
