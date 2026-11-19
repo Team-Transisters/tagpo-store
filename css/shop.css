@@ -195,13 +195,17 @@ header {
 }
 
 .product-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 220px);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 24px;
 }
 
 .product-card {
-    background: #fffbe0;
+    flex: 1 1 220px;
+    max-width: 220px;
+    min-width: 180px;
+    background: var(--tagpo-neutral);
     border-radius: 20px;
     padding: 7px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.20);
