@@ -133,51 +133,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 document.addEventListener("DOMContentLoaded", function () {
-    const sizeButtons = document.querySelectorAll(".size-buttons button");
-    const selectedSize = document.getElementById("selected-size");
-
-    const sizeNames = {
-        XS: "Extra Small",
-        S: "Small",
-        M: "Medium",
-        L: "Large",
-        XL: "Extra Large"
-    };
-
-    sizeButtons.forEach(function (button) {
-        button.addEventListener("click", function () {
-            sizeButtons.forEach(function (btn) {
-                btn.classList.remove("active");
-                btn.setAttribute("aria-pressed", "false");
-            });
-            button.classList.add("active");
-            button.setAttribute("aria-pressed", "true");
-            selectedSize.textContent =
-                sizeNames[button.dataset.size];
-        });
-    });
-
-    const quantityDisplay = document.getElementById("quantity");
-    const decreaseButton = document.getElementById("decrease-quantity");
-    const increaseButton = document.getElementById("increase-quantity");
-  
-    let quantity = 1;
-
-    decreaseButton.addEventListener("click", function () {
-        if (quantity > 1) {
-            quantity--;
-            quantityDisplay.textContent = quantity;
-        }
-    });
-  
-    increaseButton.addEventListener("click", function () {
-        quantity++;
-        quantityDisplay.textContent = quantity;
-    });
-});
-
-
-document.addEventListener("DOMContentLoaded", function () {
     const productGalleries = document.querySelectorAll(".product-gallery");
 
     productGalleries.forEach(function (gallery) {
@@ -291,19 +246,53 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 document.addEventListener("DOMContentLoaded", function () {
-    const orderButton = document.querySelector("#order-now");
+    const sizeButtons = document.querySelectorAll(".size-buttons button");
+    const selectedSize = document.getElementById("selected-size");
+    const sizeNames = {
+        XS: "Extra Small",
+        S: "Small",
+        M: "Medium",
+        L: "Large",
+        XL: "Extra Large"
+    };
+    let selectedSizeCode = "";
+    sizeButtons.forEach(function (button) {
+        button.addEventListener("click", function () {
+            sizeButtons.forEach(function (btn) {
+                btn.classList.remove("active");
+                btn.setAttribute("aria-pressed", "false");
+            });
+            button.classList.add("active");
+            button.setAttribute("aria-pressed", "true");
+            selectedSizeCode = button.dataset.size;
+            selectedSize.textContent = sizeNames[selectedSizeCode];
+        });
+    });
 
-    if (!orderButton) return;
+    const quantityDisplay = document.getElementById("quantity");
+    const decreaseButton = document.getElementById("decrease-quantity");
+    const increaseButton = document.getElementById("increase-quantity");
+    let quantity = 1;
+    decreaseButton.addEventListener("click", function () {
+        if (quantity > 1) {
+            quantity--;
+            quantityDisplay.textContent = quantity;
+        }
+    });
+    increaseButton.addEventListener("click", function () {
+        quantity++;
+        quantityDisplay.textContent = quantity;
+    });
+
+
+    const orderButton = document.getElementById("order-now");
     orderButton.addEventListener("click", function () {
-        const productName = document.querySelector(".product-title")?.textContent.trim();
-        const selectedSize = document.querySelector("#selected-size")?.textContent.trim();
-        const quantity = document.querySelector("#quantity")?.textContent.trim();
-
-        if (!productName || !selectedSize || !quantity) {
-            alert("Please select a product size and quantity.");
+        const productName = document.querySelector(".product-details h1")?.textContent.trim();
+        const quantityValue = quantityDisplay.textContent.trim();
+        if (!selectedSizeCode) {
+            alert("Please select a size before placing your order.");
             return;
         }
-
         const recipient = "orders@examplewebsite142.com";
         const subject = "TAGPO | New Order Request";
         const body = `
@@ -316,11 +305,11 @@ document.addEventListener("DOMContentLoaded", function () {
         ================================
         
         Product:  ${productName}
-        Size:     ${selectedSize}
-        Quantity: ${quantity}
+        Size:     ${sizeNames[selectedSizeCode]} (${selectedSizeCode})
+        Quantity: ${quantityValue}
         
         ================================
-                CUSTOMER INFORMATION
+               CUSTOMER INFORMATION
         ================================
         
         Please use the sender's email address
@@ -340,4 +329,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
         window.location.href = mailtoLink;
     });
+
 });
