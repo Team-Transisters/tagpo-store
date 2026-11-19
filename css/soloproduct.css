@@ -248,7 +248,7 @@ header {
     transform: translateY(-50%);
     width: 42px;
     height: 42px;
-    color: #fffadd37;
+    background: #fffadd37;
     display: flex;
     justify-content: center;
     align-items: center;
