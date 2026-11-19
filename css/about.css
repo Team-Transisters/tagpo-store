@@ -52,6 +52,10 @@ body {
 header {
   width: 100%;
   background-color: #ffffff;
+  border-bottom: 1px solid #dee2e6;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  position: sticky;
+  top: 0;
   z-index: 1030;
 }
 
@@ -123,7 +127,7 @@ header {
   overflow: hidden;
   white-space: nowrap;
   cursor: pointer;
-  transition: width 0.28s ease, padding 0.28s, gap 0.28s ease, opacity 0.2s ease, background-color 0.2s ease;
+  transition: width 0.28s ease, padding 0.28s ease, gap 0.28s ease, opacity 0.2s ease;
 }
 
 .search-pill-btn:hover,
@@ -131,7 +135,6 @@ header {
   width: 116px;
   padding: 0 16px;
   gap: 8px;
-  background-color: var(--tagpo-primary);
   opacity: 1;
 }
 
@@ -147,10 +150,10 @@ header {
   font-family: var(--font-body);
   font-size: 0.9rem;
   font-weight: 600;
-  opacity:0;
+  opacity: 0;
   max-width: 0;
   overflow: hidden;
-  transition: opacity 0.2s ease 0.06s, max-width 0.28 ease;
+  transition: opacity 0.2s ease 0.06s, max-width 0.28s ease;
 }
 
 .search-pill-btn:hover .search-pill-text,
@@ -170,15 +173,23 @@ header {
   display: block;
 }
 
-..tagpo-search-input:focus {
+.tagpo-search-input {
+  width: 100%;
+  padding: 0.5rem 0.9rem;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+}
+
+.tagpo-search-input:focus {
   outline: none;
   box-shadow: 0 0 0 3px rgba(255, 122, 61, 0.25);
 }
 
 .tagpo-search-results {
   list-style: none;
-  margin: 0.5rem 0 0;
-  padding: 0;
+  margin-top: 0.5rem;
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
