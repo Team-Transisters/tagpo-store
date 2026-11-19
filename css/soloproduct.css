@@ -431,8 +431,7 @@ header {
 }
 
 .wishlist-button:hover {
-    background: var(--tagpo-primary);
-    color: white;
+    background: #ff7a3d86;
 }
 
 .product-description {
