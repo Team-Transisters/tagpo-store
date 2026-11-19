@@ -26,6 +26,132 @@
   box-sizing:border-box;
 }
 
+header {
+  width: 100%;
+  background-color: #ffffff;
+  z-index: 1030;
+}
+
+.header-logo-img {
+  height: 40px;
+  width: auto;
+  min-width: 110px;
+  object-fit: contain;
+  display: block;
+}
+
+.brand-logo-text {
+  font-family: var(--font-header);
+  color: var(--tagpo-secondary-2);
+  font-weight: 700;
+  font-size: 2.2rem;
+  letter-spacing: -0.5px;
+  text-decoration: none;
+}
+
+.nav-link {
+  color: var(--tagpo-dark) !important;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--tagpo-primary) !important;
+}
+
+.search-pill-btn {
+  background-color: var(--tagpo-primary);
+  opacity: 0.85;
+  border-radius: 50px;
+  width: 44px;
+  height: 36px;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 13px;
+  gap: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: width 0.28s ease, padding 0.28s, gap 0.28s ease, opacity 0.2s ease, background-color 0.2s ease;
+}
+
+.search-pill-btn:hover,
+.search-pill-btn:focus-visible {
+  width: 116px;
+  padding: 0 16px;
+  gap: 8px;
+  background-color: var(--tagpo-primary);
+  opacity: 1;
+}
+
+.search-icon-img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.search-pill-text {
+  color: #ffffff;
+  font-family: var(--font-body);
+  font-size: 0.9 rem;
+  font-weight: 600;
+  opacity:0;
+  max-width: 0;
+  overflow: hidden;
+  transition: opacity 0.2s ease 0.06s, max-width 0.28 ease;
+}
+
+.search-pill-btn:hover .search-pill-text,
+.search-pill-btn:focus-visible .search-pill-text {
+  opacity: 1;
+  max-width: 70px;
+}
+
+.tagpo-search-drawer {
+  background-color: #ffffff;
+  border-top: 1px solid #eaeaea;
+  padding: 0.75rem 0;
+  display: none;
+}
+
+.tagpo-search-drawer.is-open {
+  display: block;
+}
+
+.tagpo-search-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 122, 61, 0.25);
+}
+
+.tagpo-search-results {
+  list-style: none;
+  margin: 0.5rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tagpo-search-results a {
+  display: inline-block;
+  padding: 0.3rem 0.85rem;
+  border-radius: 50px;
+  background-color: var(--tagpo-neutral);
+  color: var(--tagpo-secondary-2);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid var(--tagpo-primary);
+}
+
+.tagpo-search-results a:hover {
+  background-color: var(--tagpo-primary);
+  color: #ffffff;
+}
+
 body {
     height: 100vh;
     width: 100%;
