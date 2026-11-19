@@ -300,20 +300,13 @@ document.addEventListener("DOMContentLoaded", function () {
         
         I would like to place an order with the following details:
         
-        ================================
-                   ORDER DETAILS
-        ================================
-        
         Product:  ${productName}
         Size:     ${sizeNames[selectedSizeCode]} (${selectedSizeCode})
         Quantity: ${quantityValue}
         
         ================================
-               CUSTOMER INFORMATION
-        ================================
-        
-        Please use the sender's email address
-        to contact me regarding this order.
+
+        Please use the sender's email address to contact me regarding this order.
         
         ================================
         
