@@ -247,13 +247,6 @@ header {
     object-fit: cover;
     border: 2px solid var(--tagpo-secondary-2);
     border-radius: 10px;
-    cursor: pointer;
-    transition: 0.3s ease;
-}
-
-.thumbnail-images img:hover {
-    border-color: var(--tagpo-secondary-2);
-    transform: translateY(-3px);
 }
 
 .product-details {
