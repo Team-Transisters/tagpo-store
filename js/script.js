@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+
 document.addEventListener("DOMContentLoaded", function () {
   const searchBtn = document.querySelector(".search-pill-btn");
   const header = document.querySelector("header");
@@ -125,7 +126,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 btn.classList.remove("active");
                 btn.setAttribute("aria-pressed", "false");
             });
-          
             button.classList.add("active");
             button.setAttribute("aria-pressed", "true");
             selectedSize.textContent =
@@ -152,11 +152,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-
-// =============================================
-// UNIVERSAL PRODUCT IMAGE GALLERY
-// Works on all Tagpo product pages
-// =============================================
 
 document.addEventListener("DOMContentLoaded", function () {
     const productGalleries = document.querySelectorAll(".product-gallery");
@@ -221,7 +216,6 @@ document.addEventListener("DOMContentLoaded", function () {
         nextButton.addEventListener("click", function () {
             showImage(currentImage + 1);
         });
-
         previousButton.addEventListener("click", function () {
             showImage(currentImage - 1);
         });
