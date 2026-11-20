@@ -512,39 +512,6 @@ main {
     }
 }
 
-@media (max-width: 576px) {
-    header .navbar > .container {
-        flex-wrap: wrap;
-        gap: 12px;
-    }
-    header .navbar .nav {
-        gap: 0 !important;
-    }
-    header .navbar .nav-link {
-        font-size: 0.75rem;
-        padding-left: 5px !important;
-        padding-right: 5px !important;
-    }
-    .header-logo-img {
-        height: 32px;
-        min-width: 0;
-    }
-    .search-pill-btn {
-        width: 36px;
-        height: 34px;
-        padding: 0 9px;
-    }
-    .search-pill-btn:hover,
-    .search-pill-btn:focus-visible {
-        width: 36px;
-        padding: 0 9px;
-        gap: 0;
-    }
-    .search-pill-text {
-        display: none;
-    }
-}
-
 @media (max-width: 480px) {
     #hero-container {
         min-height: 55vh;
