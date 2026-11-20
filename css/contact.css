@@ -336,6 +336,13 @@ footer {
   text-align: right;
 }
 
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
 .footer-logo-img {
   max-height: 48px;
   width: auto;
