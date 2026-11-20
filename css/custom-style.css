@@ -196,7 +196,7 @@ main {
 
 #hero-container {
     display: flex;
-    align-items: center;
+    align-items: end;
     width: 100%;
     min-height: 90vh;
     background-image: url("../images/home-hero-photo.png");
@@ -208,7 +208,10 @@ main {
 
 .hero-content {
     width: min(1200px, calc(100% - 48px));
-    margin: 0 auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 8rem;
+    padding-bottom: 5rem;
 }
 
 .hero-content h1 {
@@ -220,12 +223,14 @@ main {
     color: var(--tagpo-btn-dark);
     font-weight: 400;
     font-size: 1.15rem;
-    margin: 0 0 30px;
+    margin-top: 0.7rem;
+    margin-left:1rem;
 }
 
 .hero-content .hero-btn {
     display: inline-block;
-    margin: 0;
+    margin-left: 1rem;
+    margin-top: 1.5rem;
     padding: 0.5rem 2rem;
     width: max-content;
     background-color: var(--tagpo-neutral);
@@ -255,11 +260,12 @@ main {
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
-    gap: 2rem;
+    gap: 3rem;
     width: 100%;
     height: auto;
     padding: 50px 24px;
-    margin-top: -3rem;
+    margin-top: 0;
+    margin-bottom: -30px;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
     box-shadow: 0 -15px 30px rgba(65, 1, 1, 0.1);
@@ -331,35 +337,20 @@ main {
     border-radius: 20px;
 }
 
-@media (max-width: 1280px) {
-    body{
-        height: unset;
-        padding: 30px 0;
-    }
-    .products-container{
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .products-container .product-card{
-        margin: 20px;
-    }
-}
-
 #about-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
     gap: 2rem;
-
-    width: min(1200px, calc(100% - 48px));
-    margin: 50px auto;
+    max-width: 80%;
+    margin-top: -100rem;
 }
 
 .about-images-parent {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 15px;
+    gap: 0.5rem;
     width: 100%;
     padding: 0;
 }
@@ -371,13 +362,14 @@ main {
     width: 50%;
     height: 250px;
     margin: 0;
-    object-fit: cover;
     border-radius: 20px;
 }
 
 .about-images-parent .img-1 {
     height: 250px;
-    object-fit: cover;
+    object-fit: contain;
+    margin-left: -1.8rem;
+    margin-right: -2rem;
 }
 
 .about-images-parent .img-2 {
@@ -388,7 +380,8 @@ main {
 
 .about-content {
     width: 100%;
-    margin: 0;
+    padding-left: 2rem;
+    padding-right: 1rem;
 }
 
 .about-content h3 {
@@ -424,6 +417,30 @@ main {
     background-color: #857413;
     color: #ffffff;
     transform: translateY(-1px);
+}
+
+@media (max-width: 1280px) {
+    body{
+        height: unset;
+        padding: 30px 0;
+    }
+    .products-container{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .products-container .product-card{
+        margin: 20px;
+    }
+}
+
+#about-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 2rem;
+
+    width: min(1200px, calc(100% - 48px));
+    margin: 50px auto;
 }
 
 @media (max-width: 992px) {
