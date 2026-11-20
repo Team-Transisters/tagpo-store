@@ -206,8 +206,8 @@ header {
 }
 
 .product-card {
-    flex: 0 0 220px;
-    width: 220px;
+    flex: 0 0 230px;
+    width: 230px;
     max-width: 100%;
     background: var(--tagpo-neutral);
     border-radius: 20px;
