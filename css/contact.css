@@ -190,7 +190,7 @@ header {
 
 .card-content {
   padding: 1.75rem 2rem;
-  background-color: var(--tagpo-card-gray);
+  background-color: var(--tagpo-neutral);
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
   margin-top: -10px;
@@ -281,7 +281,7 @@ header {
 
 .custom-input,
 .custom-textarea {
-  background-color: var(--tagpo-card-gray);
+  background-color: var(--tagpo-neutral);
   border: 2px solid transparent;
   border-radius: 12px;
   padding: 0.85rem 1.1rem;
