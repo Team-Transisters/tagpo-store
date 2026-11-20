@@ -196,7 +196,7 @@ main {
 
 #hero-container {
     display: flex;
-    align-items: end;
+    align-items: center;
     width: 100%;
     min-height: 90vh;
     background-image: url("../images/home-hero-photo.png");
