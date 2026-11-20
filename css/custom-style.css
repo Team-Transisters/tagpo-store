@@ -351,9 +351,9 @@ main{
 #about-container{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 80px;
+    gap: 2rem;
     justify-self: center;
-    width: 100%;
+    width: 90%;
     margin: 25px 0px;
 }
 
