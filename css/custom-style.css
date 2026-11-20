@@ -566,7 +566,7 @@ main {
     }
 
     .hero-content .hero-btn{
-        margin-top: -20px;
+        margin-top: 20px;
         margin-left: 0px;
     }
 
@@ -586,6 +586,7 @@ main {
         display: flex;
         flex-direction: column-reverse;
         gap: 1rem;
+        max-width: 100%;
         width: 100%;
     }
 
@@ -593,11 +594,13 @@ main {
         flex-direction: row;
         align-items: center;
         gap: 1rem;
+        margin-top: -20px;
+
     }
 
     .about-images-parent .img-1{
-        width: 100%;
-        height: auto;
+        width: 20rem;
+        height: 12rem;
         margin-left: 0px;
         flex-shrink: 2;
     }
