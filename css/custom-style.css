@@ -26,6 +26,16 @@
   box-sizing:border-box;
 }
 
+body {
+  font-family: var(--tagpo-font-body);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--tagpo-dark);
+  background-color: #ffffff;
+  width: 100%;
+  overflow-x: hidden;
+}
+
 header {
   width: 100%;
   background-color: #ffffff;
@@ -152,15 +162,23 @@ header {
   color: #ffffff;
 }
 
-body {
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    font-family: var(--tagpo-font-body);
-    font-size: 1rem;
-    line-height: 1.6;
-    color: var(--tagpo-dark);
-    background-color: #ffffff;
+.content-container {
+  max-width: 900px;
+  width: 100%;
+}
+
+.page-title {
+  font-family: var(--font-header);
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: var(--tagpo-primary);
+  line-height: 1.1;
+}
+
+.subtitle-text {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--tagpo-secondary-2);
 }
 
 h1, h2, h3, h4, h5, h6,
@@ -174,7 +192,6 @@ main{
     margin-top:-25px;
 }
 
-/* home page */
 #hero-container{
     display: flex;
     align-items: center;
