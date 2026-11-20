@@ -455,7 +455,7 @@ header {
 }
 
 .wishlist-button:hover {
-    background-color: #ff7a3d2a;;
+    background-color: #ff7a3d2a;
     color: var(--tagpo-primary);
 }
 
