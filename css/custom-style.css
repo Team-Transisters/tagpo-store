@@ -513,53 +513,95 @@ main {
 }
 
 @media (max-width: 480px) {
-    #hero-container {
-        min-height: 55vh;
+    .content-container{
+        padding: 0px;
+        margin: 0px;
+        width: 100%;
     }
+
+    #hero-container{
+      text-align: center;
+      justify-content: center;
+      background-image: url("home-hero-photo.png");
+      background-position:left center;
+      height: 80vh;
+    }
+
     .hero-content {
-        width: calc(100% - 32px);
+      margin: 0px;
+      padding: 0px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
-    .hero-content h1 {
-        font-size: 2.8rem;
+
+    .hero-content h1{
+      margin: 0px;
+      padding: 0px;
+      justify-content: center;
+      align-self: center;
+      font-size: 5rem;
     }
-    .hero-content p {
-        font-size: 0.85rem;
+
+    .hero-content p{
+        font-size: 1.1rem;
+        margin-top: 10px;
     }
-    #products-container {
-        gap: 12px;
-        padding: 30px 12px;
+
+    .hero-content .hero-btn{
+        margin-top: -20px;
+        margin-left: 0px;
     }
-    .product-card {
-        flex: 1 1 140px;
-        width: auto;
-        max-width: 300px;
-        padding: 6px;
+
+    #products-container{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        padding: 30px 0px;
     }
-    .product-card .product-card-content h3 {
-        font-size: 13px;
+
+    .product-card{
+        width: 75%;
     }
-    .product-card .product-card-content p {
-        font-size: 11px;
+
+    #about-container{
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 1rem;
+        width: 100%;
     }
-    .product-card .product-card-content .price {
-        font-size: 13px;
+
+    .about-images-parent{
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .about-images-parent .img-1{
+        width: 100%;
         height: auto;
+        margin-left: 0px;
+        flex-shrink: 2;
     }
-    #about-container {
-        width: calc(100% - 32px);
+
+    .about-images-parent .img-2{
+        width: 100%;
+        height: auto;
+        margin-top: 0px;
+        flex-grow: 1.5;
     }
-    .about-images-parent {
-        gap: 8px;
+
+    .about-content{
+        margin: 10px 20px;
+        text-align: center;
     }
-    .about-images-parent img {
-        flex: 1 1 130px;
-        height: 170px;
+
+    .about-content h3{
+        font-size: 2rem;
     }
-    .about-images-parent .img-2 {
-        height: 150px;
-    }
-    .about-content h3 {
-        font-size: 1.5rem;
+
+    .about-content p{
+        font-size: 0.9rem;
     }
 }
 
