@@ -205,6 +205,7 @@ header {
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.14);
+  margin: 2.5rem;
 }
 
 .hero-image-card img {
@@ -243,7 +244,7 @@ header {
 .collage-item {
   border-radius: 16px;
   overflow: hidden;
-  background-color: #ffffff;
+  background-color: white;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
 
@@ -293,11 +294,12 @@ header {
 .shop-pill-btn {
   display: inline-block;
   background-color: var(--tagpo-secondary-1);
-  color: #ffffff;
+  color: white;
   font-size: 1rem;
   font-weight: 700;
   letter-spacing: 0.5px;
   text-decoration: none;
+  margin: 2.5rem;
   border-radius: 50px;
   padding: 0.7rem 2.5rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -306,7 +308,7 @@ header {
 
 .shop-pill-btn:hover {
   background-color: #857413;
-  color: #ffffff;
+  color: white;
   transform: translateY(-1px);
 }
 
