@@ -522,7 +522,7 @@ main {
     #hero-container{
       text-align: center;
       justify-content: center;
-      background-image: url("home-hero-photo.png");
+      background-image: url("../images/home-hero-photo.png");
       background-position:left center;
       height: 80vh;
     }
