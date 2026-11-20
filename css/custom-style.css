@@ -575,6 +575,7 @@ main {
     .about-images-parent{
         flex-direction: row;
         align-items: center;
+        gap: 1rem;
     }
 
     .about-images-parent .img-1{
@@ -586,9 +587,10 @@ main {
 
     .about-images-parent .img-2{
         width: 100%;
-        height: auto;
-        margin-top: 0px;
+        height: 9.6rem;
+        margin-top: -5px;
         flex-grow: 1.5;
+        object-fit: fill;
     }
 
     .about-content{
