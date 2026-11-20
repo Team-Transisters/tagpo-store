@@ -381,7 +381,9 @@ footer {
   color: var(--tagpo-secondary-2);
   text-decoration: none;
   font-weight: 500;
-  text-align: right;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  max-width: 100%;
 }
 
 .footer-email:hover {
