@@ -332,6 +332,10 @@ footer {
   margin-top: auto;
 }
 
+.footer-contact-col {
+  text-align: right;
+}
+
 .footer-logo-img {
   max-height: 48px;
   width: auto;
